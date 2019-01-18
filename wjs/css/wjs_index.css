@@ -1,0 +1,30 @@
+/*定义变量*/
+.wjs_header {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+.wjs_header .row {
+  height: 100%;
+}
+.wjs_header .row div:nth-of-type(-n+3) {
+  border-right: 1px solid #ccc;
+  text-align: center;
+}
+.wjs_header .row div:nth-of-type(-n+3) .wjs_code {
+  position: relative;
+  display: block;
+}
+.wjs_header .row div:nth-of-type(-n+3) .wjs_code img {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 49px;
+  transform: translateX(-50%);
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.wjs_header .row div:nth-of-type(-n+3) .wjs_code:hover img {
+  display: block;
+  z-index: 999;
+}

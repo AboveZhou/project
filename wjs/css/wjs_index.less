@@ -1,0 +1,33 @@
+/*定义变量*/
+@baseColor:#e92322;
+.wjs_header {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+  .row {
+    height: 100%;
+    div:nth-of-type(-n+3) {
+      border-right: 1px solid #ccc;
+      text-align: center;
+      .wjs_code {
+       position: relative;
+       display: block;
+       img {
+         display: none;
+         position: absolute;
+         left: 50%;
+         top: 49px;
+         transform: translateX(-50%);
+         border: 1px solid #ccc;
+         border-top: none;
+       }
+       &:hover {
+        img {
+          display: block;
+          z-index: 999;
+        }
+      }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <script src="./js/swiper.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .swiper-container {
+            width: 100%;
+        }
+        
+        ul li img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <img data-sm="./images/slide_01_640x340.jpg" data-lg="./images/slide_01_2000x410.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img data-sm="./images/slide_02_640x340.jpg" data-lg="./images/slide_02_2000x410.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img data-sm="./images/slide_03_640x340.jpg" data-lg="./images/slide_03_2000x410.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img data-sm="./images/slide_04_640x340.jpg" data-lg="./images/slide_04_2000x410.jpg">
+            </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+    </div>
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: {
+            delay: 2000,
+        },
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    })
+
+    function imgUrl() {
+        //获取img
+        var img = document.querySelectorAll(".swiper-wrapper img");
+        //获取屏幕宽度
+        var srceenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        // console.log(srceenWidth);
+
+        if (srceenWidth > 640) {
+            img.forEach(function(value, index) {
+                value.src = value.dataset.lg;
+            })
+        } else {
+            img.forEach(function(value, index) {
+                value.src = value.dataset.sm;
+            })
+        }
+    }
+    //调用函数
+    imgUrl();
+    //当屏幕改变时触发
+    window.onresize = function() {
+        imgUrl();
+    }
+</script>
+
+</html>

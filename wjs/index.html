@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>手机-微金所</title>
+    <link href="./lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--引入公共样式文件--字体图标-->
+    <link rel="stylesheet" href="./css/base.css">
+    <!--引入当前页面的样式文件-->
+    <link rel="stylesheet" href="./css/wjs_index.css">
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/wjs-index.js"></script>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <script src="./js/swiper.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .swiper-container ul img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--头部块-->
+    <header class="wjs_header hidden-xs hidden-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <a href="javascript:;" class="wjs_code">
+                        <span class="wjs_icon wjs_icon_phone"></span>
+                        <span>手机微金所</span>
+                        <span class="glyphicon glyphicon-menu-down"></span>
+                        <img src="./images/code.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <span class="wjs_icon wjs_icon_tel"></span>
+                    <a href="javascript:;">4006-89-4006（服务时间：9:00~21:00） 联系在线客服</a>
+                </div>
+                <div class="col-md-2">
+                    <a href="javascript:;">常见问题</a>&nbsp;&nbsp;
+                    <a href="javascript:;">财富登录</a>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-danger">免费注册</button>
+                    <button type="button" class="btn btn-link">登录</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--导航条-->
+    <nav class="navbar navbar-default wjs_nav">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="wjs_icon wjs_icon_logo"></span>
+                    <span class="wjs_icon wjs_icon_text"></span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav hidden-sm">
+                    <li class="active"><a href="#">我要投资 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">我要借贷</a></li>
+                    <li><a href="#">平台介绍</a></li>
+                    <li><a href="#">新手专区</a></li>
+                    <li><a href="#">最新动态</a></li>
+                    <li><a href="#">微平台</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">个人中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--轮播图-->
+    <div class="swiper-container">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <img data-sm="./images/slide_01_640x340.jpg" data-lg="./images/slide_01_2000x410.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img data-sm="./images/slide_02_640x340.jpg" data-lg="./images/slide_02_2000x410.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img data-sm="./images/slide_03_640x340.jpg" data-lg="./images/slide_03_2000x410.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img data-sm="./images/slide_04_640x340.jpg" data-lg="./images/slide_04_2000x410.jpg">
+            </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!--信息块-->
+    <div class="wjs_info"></div>
+    <!--预约块-->
+    <div class="wjs_reverse"></div>
+    <!--产品块-->
+    <div class="wjs_product"></div>
+    <!--新闻块-->
+    <div class="wjs_news"></div>
+    <!--合作伙伴-->
+    <footer class="wjs_partner"></footer>
+
+
+
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: {
+            delay: 2000,
+        },
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    });
+</script>
+
+</html>
